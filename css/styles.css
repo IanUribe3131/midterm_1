@@ -16,6 +16,20 @@ body {
     border-radius: 15px;
 }
 
+/*phone*/
+.game-header {
+    width: 90%;
+    margin-top: 20px;
+}
+
+/*desktop*/
+@media (min-width: 768px){
+    .hame-header {
+        width: 610px;
+        margin-top: 40px;
+    }
+}
+
 .game-title {
     font-size: 24px;
     line-height: 0.85;
@@ -44,31 +58,84 @@ body {
     color: hsl(229, 25%, 31%);
 }
 
+.game-board {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: 60px auto;
+}
+
+.pentagon {
+    position: absolute;
+    width: 300px;
+    left: 100px;
+    top: 100px;
+}
+
 .choice {
-    height: 110px;
-    width: 110px;
+    position: absolute;
+    height: 140px;
+    width: 140px;
     background-color: white;
     border: 10px solid;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
 }
 
 .rock {
     border-color: hsl(349, 70%, 56%);
     box-shadow: 0 5px 0 hsl(349, 71%, 52%);
+
+    right: 80px;
+    bottom: 40px;
 }
 .paper {
     border-color: hsl(230, 89%, 65%);
     box-shadow: 0 5px 0 hsl(230, 89%, 62%);
+
+    top: 140px;
+    right: 20px;
 }
 .scissors {
     border-color: hsl(40, 84%, 53%);
     box-shadow: 0 5px 0 hsl(39, 89%, 49%);
+
+    right: 180px;
+    top: 30px;
 }
 .lizard {
     border-color: hsl(261, 72%, 63%);
     box-shadow: 0 5px 0 hsl(261, 73%, 60%);
+
+    bottom: 40px;
+    left: 80px;
 }
 .spock {
     border-color: hsl(189, 58%, 57%);
     box-shadow: 0 5px 0 hsl(189, 59%, 53%);
+
+    top: 140px;
+    left: 20px;
+}
+
+
+.result-choice {
+    width: 200px;
+    height: 200px;
+
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 30px auto;
+}
+
+.result-choice img {
+    width: 90px;
 }

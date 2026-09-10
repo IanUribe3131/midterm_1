@@ -29,7 +29,7 @@
               <div class="card text-center scoreboard">
                 <div class="card-body">
                   <span>Score</span>
-                  <strong>0</strong>
+                  <strong id="score">0</strong>
                 </div>
               </div>
             </div>
@@ -37,10 +37,10 @@
     </div>
   </section>
 
-  <section class="play-area">
+  <section class="play-area ">
     <div class="container game-board position-relative" id="game-board">
 
-      <img src="./images/bg-pentagon.svg">
+      <img src="./images/bg-pentagon.svg" class="pentagon">
       <!--game buttons-->
       <button class="btn rounded-circle btn-outline-secondary rock choice" id="rock">
         <img src="./images/icon-rock.svg" alt="rock">
@@ -75,6 +75,33 @@
         data-bs-content="<img src='./images/image-rules.svg' alt='rules'>"
       >
       RULES</button>
+    </div>
+  </section>
+
+  <section id="1v1">
+    <div id="results" class="results d-none">
+      <div class="row align-items-center text-center">
+
+        <div class="col player" id="player">
+          <h2>YOU PICKED</h2>
+          <div id="user-choice" class="result-choice">
+          </div>
+        </div>
+
+        <div class="col result-message">
+          <h2 id="winner-text">YOU WIN</h2>
+          <button class="btn btn-outline-secondary" onclick="resetGame()">
+            PLAY AGAIN
+          </button>
+        </div>
+
+        <div class="col player">
+          <h2> THE HOUSE PICKED</h2>
+          <div id="computer-choice" class="result-choice">
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
