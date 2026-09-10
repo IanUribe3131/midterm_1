@@ -3,24 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Rock, Paper, Scissors</title>
-
-</head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Rock, Paper, Scissors, Lizard, Spock</title>
+ 
 <body>
+  <section class="game-bar">
+    <div class="container-md info">
+      <header class="game-header">
+          <div class="row align-items-center">
+            <div class="col">
+              <h3 class="game-title">
+                ROCK<br>
+                PAPER<br>
+                SCISSORS<br>
+                LIZARD<br>
+                SPOCK
+              </h3>
+            </div>
+            <div class="col-auto">
+              <div class="card text-center scoreboard">
+                <div class="card-body">
+                  <span>Score</span>
+                  <strong>0</strong>
+                </div>
+              </div>
+            </div>
+      </header>
+    </div>
+  </section>
 
-  Score
-  Rules
+  <section class="play-area">
+    <div class="container game-board position-relative" id="game-board">
 
-  You Picked
-  The House Picked
+      <img src="./images/bg-pentagon.svg">
+      <!--game buttons-->
+      <button class="btn rounded-circle btn-outline-secondary rock choice" id="rock">
+        <img src="./images/icon-rock.svg" alt="rock">
+      </button>
 
-  You Win
-  You Lose
+      <button class="btn rounded-circle btn-outline-secondary paper choice" id="paper">
+        <img src="./images/icon-paper.svg" alt="paper">
+      </button>
 
-  Play Again
-  
+      <button class="btn rounded-circle btn-outline-secondary scissors choice" id="scissors">
+        <img src="./images/icon-scissors.svg" alt="scissors">
+      </button>
+
+      <button class="btn rounded-circle btn-outline-secondary lizard choice" id="lizard">
+        <img src="./images/icon-lizard.svg" alt="lizard">
+      </button>
+
+      <button class="btn rounded-circle btn-outline-secondary spock choice" id="spock">
+        <img src="./images/icon-spock.svg" alt="spock">
+      </button>
+    </div>
+  </section>
+
+  <section class="rules">
+    <div class="container rules">
+      <button 
+        class="btn btn-outline-secondary rules position-absolute bottom-0 end-0 m-3"
+        id="rules-btn"
+        data-bs-toggle="popover"
+        data-bs-trigger="focus"
+        data-bs-html="true"
+        data-bs-content="<img src='./images/image-rules.svg' alt='rules'>"
+      >
+      RULES</button>
+    </div>
+  </section>
+
+  <script src="js/script.js"></script>
 </body>
 </html>

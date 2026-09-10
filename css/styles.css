@@ -1,0 +1,74 @@
+body {
+    background: radial-gradient(
+        circle,
+        hsl(214, 47%, 23%),
+        hsl(237, 49%, 15%)
+    );
+    min-height: 100vh;
+    color:white
+}
+
+.game-header {
+    max-width: 610px;
+    margin: 40px auto 0;
+    padding: 15px 25px;
+    border: 2px solid hsl(217, 16%, 45%);
+    border-radius: 15px;
+}
+
+.game-title {
+    font-size: 24px;
+    line-height: 0.85;
+    font-weight: 700;
+    margin: 0;
+}
+
+.scoreboard {
+    background: white;
+    color: hsl(229, 64%, 46%);
+    border-radius: 8px;
+    width: 130px;
+    padding: 15px;
+}
+
+.scoreboard span {
+    display: block;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+.scoreboard strong {
+    display: block;
+    font-size: 50px;
+    line-height: 1;
+    color: hsl(229, 25%, 31%);
+}
+
+.choice {
+    height: 110px;
+    width: 110px;
+    background-color: white;
+    border: 10px solid;
+    
+}
+
+.rock {
+    border-color: hsl(349, 70%, 56%);
+    box-shadow: 0 5px 0 hsl(349, 71%, 52%);
+}
+.paper {
+    border-color: hsl(230, 89%, 65%);
+    box-shadow: 0 5px 0 hsl(230, 89%, 62%);
+}
+.scissors {
+    border-color: hsl(40, 84%, 53%);
+    box-shadow: 0 5px 0 hsl(39, 89%, 49%);
+}
+.lizard {
+    border-color: hsl(261, 72%, 63%);
+    box-shadow: 0 5px 0 hsl(261, 73%, 60%);
+}
+.spock {
+    border-color: hsl(189, 58%, 57%);
+    box-shadow: 0 5px 0 hsl(189, 59%, 53%);
+}
