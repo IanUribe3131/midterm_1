@@ -64,19 +64,30 @@
     </div>
   </section>
 
-  <section class="rules">
-    <div class="container rules">
+  <section class="rules-section text-end p-3">
       <button 
-        class="btn btn-outline-secondary rules position-absolute bottom-0 end-0 m-3"
-        id="rules-btn"
-        data-bs-toggle="popover"
-        data-bs-trigger="focus"
-        data-bs-html="true"
-        data-bs-content="<img src='./images/image-rules.svg' alt='rules'>"
+        type="button"
+        class="btn btn-outline-light rules-btn"
+        data-bs-toggle="modal"
+        data-bs-target="#rulesModal"
       >
       RULES</button>
     </div>
   </section>
+
+  <div class="modal dade" id="rulesModal" tabinex="-1" arias-labelledy="rulesModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-white p-4 rounded-4">
+      <div class="modal-header border-0 pb-0 d-flex justify-content-between align-items-center">
+        <h2 class="modal-title fw-bold text-dark fs-3 m-0" id="rulesModalLabel">RULES</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center pt-4">
+        <img src="./images/image-rules-bonus.svg" alt="Rules" class="img-fluid">
+      </div>
+    </div>
+  </div>
+  </div>
 
   <section id="1v1">
     <div id="results" class="results d-none">

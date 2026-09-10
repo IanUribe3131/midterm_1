@@ -9,10 +9,6 @@ const winnerText = document.getElementById('winner-text');
 
 let score = 0;
 
-if(rulesButton && typeof bootstrap !== 'undefined') {
-    new bootstrap.Popover(rulesButton);
-}
-
 const choices = [
   "rock",
   "paper",

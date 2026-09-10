@@ -1,3 +1,8 @@
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
 body {
     background: radial-gradient(
         circle,
@@ -6,6 +11,14 @@ body {
     );
     min-height: 100vh;
     color:white
+}
+
+.rules-section {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 10;
+
 }
 
 .game-header {
@@ -24,7 +37,7 @@ body {
 
 /*desktop*/
 @media (min-width: 768px){
-    .hame-header {
+    .game-header {
         width: 610px;
         margin-top: 40px;
     }
