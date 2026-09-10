@@ -9,6 +9,10 @@ const winnerText = document.getElementById('winner-text');
 
 let score = 0;
 
+if(rulesButton && typeof bootstrap !== 'undefined') {
+    new bootstrap.Popover(rulesButton);
+}
+
 const choices = [
   "rock",
   "paper",
@@ -26,11 +30,13 @@ const rules = {
 };
 
 function renderChoice(choice){
+
   return `
-    <button class="btn rounded-circle btn-outline-secondary ${choice} choice disabled">
+
       <img src="./images/icon-${choice}.svg" alt="${choice}">
-    </button>
+
   `;
+
 }
 
 function updateScore(points){
@@ -56,7 +62,9 @@ function showResults(userChoice, computerChoice){
   resultsDisplay.classList.remove('d-none'); //makes 1v1 layout visible
 
   playerPick.innerHTML = renderChoice(userChoice);
+  playerPick.classList.add(userChoice + "-result")
   housePick.innerHTML = renderChoice(computerChoice);
+  housePick.classList.add(computerChoice + "-result")
 
   if(userChoice === computerChoice){
     winnerText.textContent = "DRAW";
@@ -75,7 +83,9 @@ function resetGame(){
   gameBoard.parentElement.classList.remove('d-none'); //reveals pentagon again
 
   playerPick.innerHTML = '';
+  playerPick.className = "result-choice";
   housePick.innerHTML = '';
+  housePick.className = "result-choice";
 }
 
 choiceButtons.forEach(button => {
