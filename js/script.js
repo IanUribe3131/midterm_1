@@ -7,11 +7,8 @@ const playerPick  = document.getElementById('user-choice');
 const housePick = document.getElementById('computer-choice');
 const winnerText = document.getElementById('winner-text');
 
-let score = 0;
-
-if(rulesButton && typeof bootstrap !== 'undefined') {
-    new bootstrap.Popover(rulesButton);
-}
+let score = parseInt(localStorage.getItem('userScore')) || 0;
+scoreDisplay.textContent = score;
 
 const choices = [
   "rock",
@@ -47,6 +44,7 @@ function updateScore(points){
   }
   scoreDisplay.textContent = score;
 
+  localStorage.setItem('userScore', score);
 }
 
 
